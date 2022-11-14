@@ -39,7 +39,7 @@ export declare class RNKeyboard {
      * Note: when it invoke the first time it will listen to RNKeyboard native event
      * @param callback Callback that will be invoked with the current keyboard height
      */
-    static addKeyboardListener(callback: keyboardListenerCallback): void;
+    static addKeyboardListener(callback: keyboardListenerCallback): () => void;
     /**
      * Will remove a previously added callback with the addKeyboardListener method
      * @param callback Callback to remove

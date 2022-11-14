@@ -92,6 +92,8 @@ export class RNKeyboard {
       RNKeyboard.isInitialized = true;
     }
     RNKeyboard.callbacks.push(callback);
+
+    return () => RNKeyboard.removeKeyboardListener(callback)
   }
 
   /**

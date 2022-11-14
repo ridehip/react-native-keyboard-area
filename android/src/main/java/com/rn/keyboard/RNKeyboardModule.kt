@@ -10,6 +10,16 @@ class RNKeyboardModule(private val reactContext: ReactApplicationContext) : Reac
     private var keyboardProvider: KeyboardProvider? = null
 
     @ReactMethod
+    fun addListener(type: String?) {
+        // Keep: Required for RN built in Event Emitter Calls.
+    }
+
+    @ReactMethod
+    fun removeListeners(type: Int?) {
+        // Keep: Required for RN built in Event Emitter Calls.
+    }
+
+    @ReactMethod
     fun setWindowSoftInputMode(mode: Int, promise: Promise) {
         try {
             UiThreadUtil.runOnUiThread {

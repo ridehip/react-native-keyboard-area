@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState, } from 'react';
 import { View } from 'react-native';
 import { RNKeyboard } from './module';
-export const KeyboardArea = forwardRef(({ style, children, isOpen: externalOpen, initialHeight = 250, minHeight = 250, onChange, }, ref) => {
+export const KeyboardArea = forwardRef(({ style, children = null, isOpen: externalOpen, initialHeight = 250, minHeight = 250, onChange, }, ref) => {
     const isOpen = useRef(false);
     const forceOpen = useRef(false);
     const keyboardHeight = useRef(initialHeight);

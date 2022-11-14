@@ -35,7 +35,7 @@ interface IProps {
   /**
    * Content to be placed under the Keyboard
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * Until the keyboard shows once, we don't know it real height,
    * so we need a initial default height
@@ -63,7 +63,7 @@ export const KeyboardArea = forwardRef<KeyboardAreaRef, IProps>(
   (
     {
       style,
-      children,
+      children = null,
       isOpen: externalOpen,
       initialHeight = 250,
       minHeight = 250,

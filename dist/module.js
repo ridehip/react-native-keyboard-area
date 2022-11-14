@@ -70,6 +70,7 @@ export class RNKeyboard {
             RNKeyboard.isInitialized = true;
         }
         RNKeyboard.callbacks.push(callback);
+        return () => RNKeyboard.removeKeyboardListener(callback);
     }
     /**
      * Will remove a previously added callback with the addKeyboardListener method
@@ -77,7 +78,6 @@ export class RNKeyboard {
      */
     static removeKeyboardListener(callback) {
         RNKeyboard.callbacks = RNKeyboard.callbacks.filter(cb => cb !== callback);
-        RNKeyboard.isInitialized = false;
     }
 }
 RNKeyboard.isInitialized = false;
